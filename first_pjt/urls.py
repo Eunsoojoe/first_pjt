@@ -19,10 +19,15 @@ from django.urls import path
 from first_app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', views.index),
-    path('', views.root),
+    path('admin/',admin.site.urls),
+    path('index/',views.index),
+    path('',views.root),
     path('hello/',views.hello),
     path('lunch/',views.lunch),
-    path('lotto/',views.lotto)
+    path('lotto/',views.lotto),
+    path('username/<name>/',views.username),
+    path('cube/<int:number>/',views.cube),
+    path('posts/',views.posts),
+    path('ping/',views.ping),
+    path('pong/',views.pong),
     ]
